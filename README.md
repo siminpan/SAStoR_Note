@@ -14,8 +14,17 @@ A SAS date value is stored as the number of days between January 1, 1960, and a 
 
 ### Read csv file ###
 
-SAS Code:
+<table>
+<tr>
+<th>SAS Code</th>
+<th>R Code</th>
+</tr>
+<tr>
+<td>
+<pre>
+
 ```SAS
+
 data work.NewSalesEmps;
     length First_Name $ 12 Last_Name $ 18 Job_Title $ 25;
     infile 'newemps.csv' dlm=',';
@@ -23,81 +32,166 @@ data work.NewSalesEmps;
 run;
 ```
 
-R Code:
+</pre>
+</td>
+<td>
+
 ```r
+    
 work.NewSalesEmps <- read.csv('newemps.csv',
-                              col.names = c("First_Name", "Last_Name" $ "Job_Title", "Salary")
+                              col.names = c("First_Name", "Last_Name", 
+                                            "Job_Title", "Salary")
                             )
 ```
 
+</td>
+</tr>
+</table>
+
 ### Print the data ###
 
-SAS Code:
+<table>
+<tr>
+<th>SAS Code</th>
+<th>R Code</th>
+</tr>
+<tr>
+<td>
+<pre>
+
 ```SAS
+
 proc print data=work.NewSalesEmps;
 run;
 ```
 
-Use head() for checking the first few rows
-Use View() to invoke a spreadsheet-style data viewer
-R Code:
+</pre>
+</td>
+<td>
+
 ```r
+
 print(work.NewSalesEmps)
+# Use head() for checking the first few rows
+# Use View() to invoke a spreadsheet-style data viewer
 ```
 
-### Print Some means ###
+</td>
+</tr>
+</table>
 
-SAS Code:
+
+### Print Some Summarise ###
+
+<table>
+<tr>
+<th>SAS Code</th>
+<th>R Code</th>
+</tr>
+<tr>
+<td>
+<pre>
+
 ```SAS
+
 proc means data=work.NewSalesEmps;
     class Job_Title;
     var Salary;
 run;
 ```
-Base R
-No number of Observations
-R Code:
+
+</pre>
+</td>
+<td>
+
 ```r
+
+# Base R, No number of Observations
 aggregate(work.NewSalesEmps$Salary, list(work.NewSalesEmps$Job_Title),
-          FUN=function(x) c(mn = mean(x), sd = sd(x), min = min(x), max = max(x) )
+          FUN=function(x) c(mn = mean(x), sd = sd(x), 
+                            min = min(x), max = max(x) )
         )
-```
-Using dplyr
-R Code:
-```r
+    
+# Using dplyr
 library(dplyr)
 work.NewSalesEmps %>%
   group_by(Job_Title) %>%
   summarise_at(vars(Salary),
-              list(n = length, mean = mean, sd = sd, min = min, max = max)
-  )
+              list(n = length, mean = mean, sd = sd, 
+                   min = min, max = max)
+              )
 ```
 
+</td>
+</tr>
+</table>
+
+
 ### Browsing the Descriptor Portion ###
-SAS Code:
+
+<table>
+<tr>
+<th>SAS Code</th>
+<th>R Code</th>
+</tr>
+<tr>
+<td>
+<pre>
+
 ```SAS
+
 proc contents data=work.NewSalesEmps;
 run;
 ```
-No easy way for R
-R Code:
+
+</pre>
+</td>
+<td>
+
 ```r
-str(df)
-names(df)
-dim(df)
-class(df)
+
+# There is no easy way for R
+str(work.NewSalesEmps)
+names(work.NewSalesEmps)
+dim(work.NewSalesEmps)
+class(work.NewSalesEmps)
 ```
+
+</td>
+</tr>
+</table>
+
+
 ### Browsing the Data Portion ###
-SAS Code:
+
+<table>
+<tr>
+<th>SAS Code</th>
+<th>R Code</th>
+</tr>
+<tr>
+<td>
+<pre>
+
 ```SAS
+
 proc print data=work.NewSalesEmps noobs;
     var Last_Name First_Name Salary;
 run;
 ```
-R Code:
+
+</pre>
+</td>
+<td>
+
 ```r
+
 work.NewSalesEmps[,c("Last_Name","First_Name","Salary")]
 ```
+
+</td>
+</tr>
+</table>
 
 ### Browsing a SAS Data Library ###
 LIBNAME libref 'SAS-data-library' <options>;
@@ -187,12 +281,14 @@ R Code:
 
 SAS Code:
 ```SAS
+    
 proc print data=work.NewSalesEmps noobs;
     var Last_Name First_Name Salary;
 run;
 ```
 R Code:
 ```r
+    
 work.NewSalesEmps[,c("Last_Name","First_Name","Salary")]
 ```
 <table>
@@ -205,6 +301,7 @@ work.NewSalesEmps[,c("Last_Name","First_Name","Salary")]
 <pre>
 
 ```SAS
+
 proc print data=work.NewSalesEmps noobs;
     var Last_Name First_Name Salary;
 run;
@@ -215,6 +312,7 @@ run;
 <td>
 
 ```r
+    
 work.NewSalesEmps[,c("Last_Name","First_Name","Salary")]
 ```
 
