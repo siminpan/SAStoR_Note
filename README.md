@@ -1,6 +1,10 @@
 # SAStoR_Note
 Notes for SAS to R
 
+SAS statements have these characteristics:
+* usually begin with an identifying keyword 
+* always end with a semicolon
+
 #### Read csv file ####
 
 ```SAS
