@@ -7,6 +7,7 @@ SAS statements have these characteristics:
 
 Add comments:
 SAS: /* comment */ or * comment ;
+
 R: # comment
 
 SAS Date Values:
