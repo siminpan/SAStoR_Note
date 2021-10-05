@@ -184,3 +184,39 @@ R Code:
 ```r
 
 ```
+
+```SAS
+proc print data=work.NewSalesEmps noobs;
+    var Last_Name First_Name Salary;
+run;
+```
+R Code:
+```r
+work.NewSalesEmps[,c("Last_Name","First_Name","Salary")]
+```
+<table>
+<tr>
+<th>SAS Code</th>
+<th>R Code</th>
+</tr>
+<tr>
+<td>
+<pre>
+
+```SAS
+proc print data=work.NewSalesEmps noobs;
+    var Last_Name First_Name Salary;
+run;
+```
+
+</pre>
+</td>
+<td>
+
+```r
+work.NewSalesEmps[,c("Last_Name","First_Name","Salary")]
+```
+
+</td>
+</tr>
+</table>
