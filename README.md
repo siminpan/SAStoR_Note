@@ -119,6 +119,17 @@ libname oralib clear;
 ```
 The LIBNAME statement remains in effect until canceled, changed, or your SAS session ends.
 
+### Default ODS Destination ###
+The LISTING destination was the default ODS destination until late 9.2.
+Since then it has been HTML.
+
+| Destination | Type of File | Viewed In |
+| ----------- | ------------ | --------- |
+| LISTING | | SAS Output Window or SAS/GRAPH Window |
+| HTML | Hypertext Markup Language | Web Browsers such as Internet Explorer |
+| PDF | Portable Document Format | Adobe Products such as Acrobat Reader |
+| RTF | Rich Text Format | Word Processors such as Microsoft Word |
+
 ###  ###
 SAS Code:
 ```SAS
