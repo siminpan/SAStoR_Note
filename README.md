@@ -319,60 +319,6 @@ SAS Supplied Style Definitions
     
 <table>
 <tr>
-<th>Reading SAS Data Sets</th>
-<th>Reading Excel Worksheets</th>
-<th>Reading Delimited Raw Data Files</th>
-</tr>
-<tr>
-<td>
-<pre>
-
-```SAS
-
-LIBNAME libref 'SAS-data-library';
-
-DATA output-SAS-data-set;
-    SET input-SAS-data-set;
-    WHERE where-expression;
-    KEEP variable-list;
-    LABEL variable = 'label'
-          variable = 'label'
-          variable = 'label';
-    FORMAT variable(s) format;
-RUN;
-```
-
-</pre>
-</td>
-<td>
-
-```SAS
-
-libname ;
-data ;
-    set ;
-    ...
-run;
-```
-
-</td>
-<td>
-
-```SAS
-
-data ;
-    infile ;
-    input ;
-    ...
-run;
-```
-
-</td>
-</tr>
-</table>
-    
-<table>
-<tr>
 <th> </th>
 <th>Reading SAS Data Sets</th>
 <th>Reading Excel Worksheets</th>
@@ -476,6 +422,48 @@ read_csv()
 </td>
 </tr>
 </table>
+    
+### The WHERE Statement ###
+
+<table>
+<tr>
+<th>SAS Code</th>
+<th>R Code</th>
+</tr>
+<tr>
+<td>
+<pre>
+
+```SAS
+
+WHERE where-expression ;
+where Gender = 'M';
+where Salary > 50000;
+
+```
+
+</pre>
+</td>
+<td>
+
+```r
+
+df[which(df$Salary > 50000),]
+```
+
+</td>
+</tr>
+</table>
+
+### Comparison Operators ###
+|Definition|SAS Symbol|SAS Mnemonic|R Symbol|
+|equal to|=|EQ|==|
+|not equal to|^= ¬= ~=|NE|!=|
+|greater than|>|GT|>|
+|less than|<|LT|<|
+|greater than or equal|>=|GE|>=|
+|less than or equal|<=|LE|<=|
+|equal to one of a list||IN|%in%|
 
 ###  ###
 SAS Code:
