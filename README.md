@@ -245,9 +245,10 @@ ODS destination FILE = ' filename.ext ' <options>;
   SAS code to generate a report(s)
 ODS destination CLOSE;
 ```
-It is a good habit to open the LISTING destination at the end of a program to guarantee an open destination for the next submission.
-Output can be sent to many destinations. Use _ALL_ in the ODS CLOSE statement to close all open destinations including the LISTING destination.
-
+It is a good habit to open the LISTING destination at the end of a program to 
+guarantee an open destination for the next submission.
+Output can be sent to many destinations. Use _ALL_ in the ODS CLOSE statement 
+to close all open destinations including the LISTING destination.
 </pre>
 </td>
 <td>
