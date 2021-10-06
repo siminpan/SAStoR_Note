@@ -225,6 +225,9 @@ Since then it has been HTML.
 | PDF | Portable Document Format | Adobe Products such as Acrobat Reader |
 | RTF | Rich Text Format | Word Processors such as Microsoft Word |
 
+The ODS LISTING CLOSE statement stops sending output to the OUTPUT and GRAPH windows.
+
+
 ###  ###
 SAS Code:
 ```SAS
