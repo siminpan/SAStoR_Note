@@ -457,6 +457,7 @@ df[which(df$Salary > 50000),]
 
 ### Comparison Operators ###
 |Definition|SAS Symbol|SAS Mnemonic|R Symbol|
+|---|---|---|---|
 |equal to|=|EQ|==|
 |not equal to|^= ¬= ~=|NE|!=|
 |greater than|>|GT|>|
