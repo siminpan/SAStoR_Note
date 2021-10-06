@@ -437,6 +437,43 @@ R Code
 
 </pre>
 </td>
+<td>
+
+```r
+
+library("haven")
+df <- read_sas("output-SAS-data.sas7bdat")
+
+library("sas7bdat")
+df <- read.sas("output-SAS-data.sas7bdat")
+```
+
+</td>
+<td>
+
+```r
+
+library("readxl")
+# xls files
+my_data <- read_excel("my_file.xls", sheet = "data")
+# xlsx files
+my_data <- read_excel("my_file.xlsx", sheet = 2)
+
+library("xlsx")
+read.xlsx(file, sheetIndex, header=TRUE)
+read.xlsx2(file, sheetIndex, header=TRUE)
+```
+
+</td>
+<td>
+
+```r
+
+read.csv()
+read_csv()
+```
+
+</td>
 </tr>
 </table>
 
