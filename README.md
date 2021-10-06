@@ -228,16 +228,40 @@ Since then it has been HTML.
 The ODS LISTING CLOSE statement stops sending output to the OUTPUT and GRAPH windows.
 
 
-###  ###
-SAS Code:
+### HTML, PDF, and RTF Destinations ###
+
+<table>
+<tr>
+<th>SAS Code</th>
+<th>R Code</th>
+</tr>
+<tr>
+<td>
+<pre>
+
 ```SAS
 
-run;
+ODS destination FILE = ' filename.ext ' <options>;
+  SAS code to generate a report(s)
+ODS destination CLOSE;
 ```
-R Code:
+
+</pre>
+</td>
+<td>
+
 ```r
 
+png(' filename.ext ' <options>)
+ code to generate a report(s)
+dev.off()
+
+# or ggsave() if it is a ggplot (or other grid object).
 ```
+
+</td>
+</tr>
+</table>
 
 ###  ###
 SAS Code:
