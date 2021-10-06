@@ -370,6 +370,75 @@ run;
 </td>
 </tr>
 </table>
+    
+<table>
+<tr>
+<th> </th>
+<th>Reading SAS Data Sets</th>
+<th>Reading Excel Worksheets</th>
+<th>Reading Delimited Raw Data Files</th>
+</tr>
+<tr>
+<td>
+<pre>
+
+SAS Code
+
+</pre>
+</td>
+<td>
+
+```SAS
+
+LIBNAME libref 'SAS-data-library';
+
+DATA output-SAS-data-set;
+    SET input-SAS-data-set;
+    WHERE where-expression;
+    KEEP variable-list;
+    LABEL variable = 'label'
+          variable = 'label'
+          variable = 'label';
+    FORMAT variable(s) format;
+RUN;
+```
+
+</td>
+<td>
+
+```SAS
+
+libname ;
+data ;
+    set ;
+    ...
+run;
+```
+
+</td>
+<td>
+
+```SAS
+
+data ;
+    infile ;
+    input ;
+    ...
+run;
+```
+
+</td>
+</tr>
+<tr>
+<td>
+<pre>
+
+R Code
+
+</pre>
+</td>
+</tr>
+</table>
 
 ###  ###
 SAS Code:
