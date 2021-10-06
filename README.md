@@ -197,6 +197,13 @@ work.NewSalesEmps[,c("Last_Name","First_Name","Salary")]
 ### Browsing a SAS Data Library ###
 LIBNAME libref 'SAS-data-library' <options>;
 LIBNAME libref engine-name <SAS/ACCESS-options>;
+
+FILENAME fileref ‘external-file' <options>;
+
+* Libref (libname) = alias to a collection of tables
+* Fileref (filename) = alias to a single file
+* Raw text files are not considered tables and cannot be
+
 SAS Code:
 ```SAS
 PROC CONTENTS DATA=libref._ALL_ NODS;
