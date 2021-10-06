@@ -285,6 +285,7 @@ ODS destination FILE = 'filename.ext'
     STYLE = style-definition;
 ```
     
+SAS Supplied Style Definitions
 |   |   |   |   |
 |---|---|---|---|
 |Analysis|Astronomy|Banker|BarrettsBlue|
