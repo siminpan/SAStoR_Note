@@ -224,28 +224,6 @@ Since then it has been HTML.
 | HTML | Hypertext Markup Language | Web Browsers such as Internet Explorer |
 | PDF | Portable Document Format | Adobe Products such as Acrobat Reader |
 | RTF | Rich Text Format | Word Processors such as Microsoft Word |
-    
-| Destination | Type of File | Viewed In |
-| ----------- | ------------ | --------- |
-| LISTING | | SAS Output Window or SAS/GRAPH Window |
-| ----------- | ------------ | --------- |
-| HTML | Hypertext Markup Language | Web Browsers such as Internet Explorer |
-| ----------- | ------------ | --------- |
-| PDF | Portable Document Format | Adobe Products such as Acrobat Reader |
-| ----------- | ------------ | --------- |
-| RTF | Rich Text Format | Word Processors such as Microsoft Word |
-| ----------- | ------------ | --------- |
-|CSVALL|Comma-Separated Value|Editor or |
-|||Microsoft Excel|
-| ----------- | ------------ | --------- |
-|MSOFFICE2K|Hypertext Markup Language|Web Browser or |
-|||Microsoft Word or |
-||||Microsoft Excel|
-| ----------- | ------------ | --------- |
-|EXCELXP|Extensible Markup Language|Microsoft Excel|
-| ----------- | ------------ | --------- |
-|EXCEL|True Excel File|Microsoft Excel|
-| ----------- | ------------ | --------- |
 
 The ODS LISTING CLOSE statement stops sending output to the OUTPUT and GRAPH windows.
 
