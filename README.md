@@ -277,6 +277,28 @@ dev.off()
 </tr>
 </table>
 
+### Style Definitions ###
+SAS Code:
+```SAS
+
+ODS destination FILE = 'filename.ext'
+    STYLE = style-definition;
+```
+|Analysis|Astronomy|Banker|BarrettsBlue|
+|Beige|blockPrint|Brick|Brown|
+|Curve|D3d|Default|Education|
+|EGDefault|Electronics|fancyPrinter|Festival|
+|FestivalPrinter|Gears|Journal|Magnify|
+|Meadow|MeadowPrinter|Minimal|Money|
+|NoFontDefault|Normal|NormalPrinter|Printer|
+|Rsvp|Rtf|sansPrinter|sasdocPrinter|
+|Sasweb|Science|Seaside|SeasidePrinter|
+|serifPrinter|Sketch|Statdoc|Statistical|
+|Theme|Torn|Watercolor|grayscalePrinter|
+|Harvest|HighContrast|Journal2|Journal3|
+|Listing|monochromePrinter|Ocean|Solutions|
+    
+    
 ###  ###
 SAS Code:
 ```SAS
