@@ -250,6 +250,7 @@ ODS destination CLOSE;
 </td>
 <td>
 
+R can save image, pdf, html, or markdown file.
 ```r
 
 png(' filename.ext ' <options>)
