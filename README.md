@@ -262,7 +262,7 @@ the LISTING destination.
 </td>
 <td>
 
-R can save image, pdf, html, or markdown file.
+R can save csv, image, pdf, html, or markdown file.
 ```r
 
 png(' filename.ext ' <options>)
@@ -271,6 +271,12 @@ dev.off()
 
 # or ggsave() if it is a ggplot (or 
 # other grid object).
+
+write.table(x, file = "", append = FALSE, quote = TRUE, sep = " ",
+            eol = "\n", na = "NA", dec = ".", row.names = TRUE,
+            col.names = TRUE, qmethod = c("escape", "double"),
+            fileEncoding = "")
+write.csv(...)
 ```
 
 </td>
