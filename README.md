@@ -316,16 +316,59 @@ SAS Supplied Style Definitions
 |Listing|monochromePrinter|Ocean|Solutions|
     
     
-###  ###
-SAS Code:
+<table>
+<tr>
+<th>Reading SAS Data Sets</th>
+<th>Reading Excel Worksheets</th>
+<th>Reading Delimited Raw Data Files</th>
+</tr>
+<tr>
+<td>
+<pre>
+
 ```SAS
 
+LIBNAME libref 'SAS-data-library';
+
+DATA output-SAS-data-set;
+    SET input-SAS-data-set;
+    WHERE where-expression;
+    KEEP variable-list;
+    LABEL variable = 'label'
+          variable = 'label'
+          variable = 'label';
+    FORMAT variable(s) format;
+RUN;
+```
+
+</pre>
+</td>
+<td>
+
+```SAS
+
+libname ;
+data ;
+    set ;
+    ...
 run;
 ```
-R Code:
-```r
 
+</td>
+<td>
+
+```SAS
+
+data ;
+    infile ;
+    input ;
+    ...
+run;
 ```
+
+</td>
+</tr>
+</table>
 
 ###  ###
 SAS Code:
