@@ -284,6 +284,9 @@ SAS Code:
 ODS destination FILE = 'filename.ext'
     STYLE = style-definition;
 ```
+    
+|   |   |   |   |
+|---|---|---|---|
 |Analysis|Astronomy|Banker|BarrettsBlue|
 |Beige|blockPrint|Brick|Brown|
 |Curve|D3d|Default|Education|
