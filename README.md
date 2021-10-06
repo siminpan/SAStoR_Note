@@ -214,7 +214,7 @@ libname oralib clear;
 ```
 The LIBNAME statement remains in effect until canceled, changed, or your SAS session ends.
 
-### Default ODS Destination ###
+### ODS Destination ###
 The LISTING destination was the default ODS destination until late 9.2.
 Since then it has been HTML.
 
@@ -224,11 +224,14 @@ Since then it has been HTML.
 | HTML | Hypertext Markup Language | Web Browsers such as Internet Explorer |
 | PDF | Portable Document Format | Adobe Products such as Acrobat Reader |
 | RTF | Rich Text Format | Word Processors such as Microsoft Word |
-
+|CSVALL|Comma-Separated Value|Editor or Microsoft Excel|
+|MSOFFICE2K|Hypertext Markup Language|Web Browser or Microsoft Word or Microsoft Excel|
+|EXCELXP|Extensible Markup Language|Microsoft Excel|
+|EXCEL|True Excel File|Microsoft Excel|
+ODS EXCEL produces a native XLSX file.
+ODS EXCEL supports SAS graphics in the output.
 The ODS LISTING CLOSE statement stops sending output to the OUTPUT and GRAPH windows.
 
-
-### HTML, PDF, and RTF Destinations ###
 
 <table>
 <tr>
