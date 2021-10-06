@@ -466,6 +466,24 @@ df[which(df$Salary > 50000),]
 |less than or equal|<=|LE|<=|
 |equal to one of a list||IN|%in%|
 
+### Arithmetic Operators ###
+|Definition|SAS Symbol|R Symbol|
+|---|---|---|
+|exponentiation|**|^ or **|
+|multiplication|*|*|
+|division|/|/|
+|addition|+|+|
+|subtraction|-|-|
+|modulus|mod()|%%|
+|integer division||%/%|
+
+### Logical Operators ###
+|Definition|SAS Symbol|SAS Mnemonic|R Symbol|
+|---|---|---|---|
+|logical and|&|AND|&|
+|logical or|\||OR|\||
+|logical not|^ ¬ ~|NOT|!|
+    
 ###  ###
 SAS Code:
 ```SAS
