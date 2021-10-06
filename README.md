@@ -228,6 +228,7 @@ Since then it has been HTML.
 |MSOFFICE2K|Hypertext Markup Language|Web Browser or Microsoft Word or Microsoft Excel|
 |EXCELXP|Extensible Markup Language|Microsoft Excel|
 |EXCEL|True Excel File|Microsoft Excel|
+    
 ODS EXCEL produces a native XLSX file.
 ODS EXCEL supports SAS graphics in the output.
 The ODS LISTING CLOSE statement stops sending output to the OUTPUT and GRAPH windows.
