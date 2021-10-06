@@ -265,7 +265,8 @@ png(' filename.ext ' <options>)
  code to generate a report(s)
 dev.off()
 
-# or ggsave() if it is a ggplot (or other grid object).
+# or ggsave() if it is a ggplot (or 
+# other grid object).
 ```
 
 </td>
