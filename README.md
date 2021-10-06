@@ -457,7 +457,7 @@ df[which(df$Salary > 50000),]
 
 ### Comparison Operators ###
 |Definition|SAS Symbol|SAS Mnemonic|R Symbol|
-|---|---|---|---|
+|---|:-:|:-:|:-:|
 |equal to|=|EQ|==|
 |not equal to|^= ¬= ~=|NE|!=|
 |greater than|>|GT|>|
@@ -468,7 +468,7 @@ df[which(df$Salary > 50000),]
 
 ### Arithmetic Operators ###
 |Definition|SAS Symbol|R Symbol|
-|---|---|---|
+|---|:-:|:-:|
 |exponentiation|**|^ or **|
 |multiplication|*|*|
 |division|/|/|
@@ -479,7 +479,7 @@ df[which(df$Salary > 50000),]
 
 ### Logical Operators ###
 |Definition|SAS Symbol|SAS Mnemonic|R Symbol|
-|---|---|---|---|
+|---|:-:|:-:|:-:|
 |logical and|&|AND|&|
 |logical or|\||OR|\||
 |logical not|^ ¬ ~|NOT|!|
