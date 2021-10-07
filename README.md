@@ -630,3 +630,51 @@ SAS formats have the following form:
 |.|is a required delimiter.|
 |d|specifies the number of decimal places in numeric formats.|
 
+Selected SAS formats:
+
+|Format|Definition|
+|:-:|---|
+|$w.|writes standard character data.|
+|w.d|writes standard numeric data.|
+|COMMAw.d|writes numeric values with a comma that separates every three digits and a period that separates the decimal fraction.|
+|COMMAXw.d|writes numeric values with a period that separates every three digits and a comma that separates the decimal fraction.|
+|DOLLARw.d|writes numeric values with a leading dollar sign, a comma that separates every three digits, and a period that separates the decimal fraction.|
+|EUROXw.d|writes numeric values with a leading euro symbol (€), a period that separates every three digits, and a comma that separates the decimal fraction.|
+
+|Format|Stored Value|Displayed Value|
+|:-:|---|---|
+|$4.|Programming|Prog|
+|12.|27134.2864|27134|
+|12.2|27134.2864|27134.29|
+|COMMA12.2|27134.2864|27,134.29|
+|COMMAX12.2|27134.2864|27.134,29|
+|DOLLAR12.2|27134.2864|$27,134.29|
+|EUROX12.2|27134.2864|€27.134,29|
+
+If you do not specify a format width that is large enough to accommodate a
+numeric value, the displayed value is automatically adjusted to fit into
+the width.
+
+|Format|Stored Value|Displayed Value|
+|:-:|---|---|
+|DOLLAR12.2|27134.2864|$27,134.29|
+|DOLLAR9.2|27134.2864|$27134.29|
+|DOLLAR8.2|27134.2864|27134.29|
+|DOLLAR5.2|27134.2864|27134|
+|DOLLAR4.2|27134.2864|27E3|
+
+SAS Date Formats
+Format|Stored Value|Displayed Value|
+|:-:|--:|--:|
+|MMDDYY6.|0|010160|
+|MMDDYY8.|0|01/01/60|
+|MMDDYY10.|0|01/01/1960|
+|DDMMYY6.|365|311260|
+|DDMMYY8.|365|31/12/60|
+|DDMMYY10.|365|31/12/1960|
+|DATE7.|-1|31DEC59|
+|DATE9.|-1|31DEC1959|
+|WORDDATE.|0|January 1, 1960|
+|WEEKDATE.|0|Friday, January 1, 1960|
+|MONYY7.|0|JAN1960|
+|YEAR4.|0|1960|
