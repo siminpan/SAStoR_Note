@@ -38,9 +38,9 @@ run;
 <td>
 
 ```r
-    
+
 work.NewSalesEmps <- read.csv('newemps.csv',
-                              col.names = c("First_Name", "Last_Name", 
+                              col.names = c("First_Name", "Last_Name",
                                             "Job_Title", "Salary")
                             )
 ```
@@ -109,16 +109,16 @@ run;
 
 # Base R, No number of Observations
 aggregate(work.NewSalesEmps$Salary, list(work.NewSalesEmps$Job_Title),
-          FUN=function(x) c(mn = mean(x), sd = sd(x), 
+          FUN=function(x) c(mn = mean(x), sd = sd(x),
                             min = min(x), max = max(x) )
         )
-    
+
 # Using dplyr
 library(dplyr)
 work.NewSalesEmps %>%
   group_by(Job_Title) %>%
   summarise_at(vars(Salary),
-              list(n = length, mean = mean, sd = sd, 
+              list(n = length, mean = mean, sd = sd,
                    min = min, max = max)
               )
 ```
@@ -151,11 +151,8 @@ run;
 
 ```r
 
-# There is no easy way for R
-str(work.NewSalesEmps)
-names(work.NewSalesEmps)
-dim(work.NewSalesEmps)
-class(work.NewSalesEmps)
+library(hmisc) 
+content(dm)
 ```
 
 </td>
@@ -195,6 +192,7 @@ work.NewSalesEmps[,c("Last_Name","First_Name","Salary")]
 </table>
 
 ### Browsing a SAS Data Library ###
+
 LIBNAME libref 'SAS-data-library' <options>;
 LIBNAME libref engine-name <SAS/ACCESS-options>;
 
@@ -203,6 +201,8 @@ FILENAME fileref ‘external-file' <options>;
 * Libref (libname) = alias to a collection of tables
 * Fileref (filename) = alias to a single file
 * Raw text files are not considered tables and cannot be
+
+accessed through a libref
 
 SAS Code:
 ```SAS
@@ -235,11 +235,10 @@ Since then it has been HTML.
 |MSOFFICE2K|Hypertext Markup Language|Web Browser or Microsoft Word or Microsoft Excel|
 |EXCELXP|Extensible Markup Language|Microsoft Excel|
 |EXCEL|True Excel File|Microsoft Excel|
-    
+
 ODS EXCEL produces a native XLSX file.
 ODS EXCEL supports SAS graphics in the output.
 The ODS LISTING CLOSE statement stops sending output to the OUTPUT and GRAPH windows.
-
 
 <table>
 <tr>
@@ -255,28 +254,29 @@ The ODS LISTING CLOSE statement stops sending output to the OUTPUT and GRAPH win
 ODS destination FILE = ' filename.ext ' <options>;
   SAS code to generate a report(s)
 ODS destination CLOSE;
+ods listing;
 ```
-It is a good habit to open the LISTING 
-destination at the end of a program to 
-guarantee an open destination for the 
+It is a good habit to open the LISTING
+destination at the end of a program to
+guarantee an open destination for the
 next submission.
-Output can be sent to many destinations. 
-Use _ALL_ in the ODS CLOSE statement 
-to close all open destinations including 
+Output can be sent to many destinations.
+Use _ALL_ in the ODS CLOSE statement
+to close all open destinations including
 the LISTING destination.
 
 </pre>
 </td>
 <td>
 
-R can save csv, image, pdf, html, or markdown file.
+R can save image, pdf, html, or markdown file.
 ```r
 
 png(' filename.ext ' <options>)
  code to generate a report(s)
 dev.off()
 
-# or ggsave() if it is a ggplot (or 
+# or ggsave() if it is a ggplot (or
 # other grid object).
 
 write.table(x, file = "", append = FALSE, quote = TRUE, sep = " ",
@@ -290,6 +290,7 @@ write.csv(...)
 </tr>
 </table>
 
+
 ### Style Definitions ###
 SAS Code:
 ```SAS
@@ -297,8 +298,9 @@ SAS Code:
 ODS destination FILE = 'filename.ext'
     STYLE = style-definition;
 ```
-    
+
 SAS Supplied Style Definitions
+
 |   |   |   |   |
 |---|---|---|---|
 |Analysis|Astronomy|Banker|BarrettsBlue|
@@ -316,7 +318,7 @@ SAS Supplied Style Definitions
 |Listing|monochromePrinter|Ocean|Solutions|
 
 ### Reading Data ###
-    
+
 <table>
 <tr>
 <th> </th>
@@ -422,7 +424,7 @@ read_csv()
 </td>
 </tr>
 </table>
-    
+
 ### The WHERE Statement ###
 
 <table>
@@ -483,9 +485,9 @@ df[which(df$Salary > 50000),]
 |logical and|&|AND|&|
 |logical or|\||OR|\||
 |logical not|^ ¬ ~|NOT|!|
-    
- ### Special WHERE Operators ###
- 
+
+### Special WHERE Operators ###
+
 Special WHERE operators are operators that can only be used in a
 where-expression.
 
@@ -521,9 +523,9 @@ KEEP variable-list;
 
 ```r
 
-# for loaded data
+# for load data
 df[,c(variable-list)]
-# for reading new data
+# for read new data
 x<- read.csv(file="datat.csv",
                colClasses = c(rep("character", 2),
                               rep("numeric", 1),
@@ -535,7 +537,7 @@ x<- read.csv(file="datat.csv",
 </td>
 </tr>
 </table>
-    
+
 ### LABEL Statement ###
 
 * a label changes the appearance of a variable name
@@ -615,7 +617,8 @@ format()
 </td>
 </tr>
 </table>
-    
+
+
 SAS formats have the following form:
 ```SAS
 
@@ -625,8 +628,8 @@ SAS formats have the following form:
 |:-:|---|
 |$|indicates a character format.|
 |format|names the SAS format or user-defined format.|
-|w|specifies the total format width including decimal|
-||places and special characters.|
+|w|specifies the total format width including decimal
+places and special characters.|
 |.|is a required delimiter.|
 |d|specifies the number of decimal places in numeric formats.|
 
@@ -652,7 +655,9 @@ Selected SAS formats:
 |EUROX12.2|27134.2864|€27.134,29|
 
 If you do not specify a format width that is large enough to accommodate a
+
 numeric value, the displayed value is automatically adjusted to fit into
+
 the width.
 
 |Format|Stored Value|Displayed Value|
