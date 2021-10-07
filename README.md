@@ -499,8 +499,6 @@ where-expression.
 |a character pattern||LIKE|grep functions|
 
 ### The DROP and KEEP Statements ###
-    
-### The DROP and KEEP Statements ###
 
 <table>
 <tr>
