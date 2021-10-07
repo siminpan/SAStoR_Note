@@ -523,14 +523,14 @@ KEEP variable-list;
 
 ```r
 
-# for load data
+# for loaded data
 df[,c(variable-list)]
-# for read new data
-x<- read.csv(file="datat.txt",
+# for reading new data
+x<- read.csv(file="datat.csv",
                colClasses = c(rep("character", 2),
                               rep("numeric", 1),
                               rep("NULL", 3)),
-               header = FALSE)
+               header = T)
 
 ```
 
