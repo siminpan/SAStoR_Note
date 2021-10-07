@@ -625,8 +625,8 @@ SAS formats have the following form:
 |:-:|---|
 |$|indicates a character format.|
 |format|names the SAS format or user-defined format.|
-|w|specifies the total format width including decimal
-places and special characters.|
+|w|specifies the total format width including decimal|
+||places and special characters.|
 |.|is a required delimiter.|
 |d|specifies the number of decimal places in numeric formats.|
 
