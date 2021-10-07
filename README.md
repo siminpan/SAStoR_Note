@@ -500,6 +500,44 @@ where-expression.
 
 ### The DROP and KEEP Statements ###
     
+### The DROP and KEEP Statements ###
+
+<table>
+<tr>
+<th>SAS Code</th>
+<th>R Code</th>
+</tr>
+<tr>
+<td>
+<pre>
+
+```SAS
+
+DROP variable-list;
+KEEP variable-list;
+```
+
+</pre>
+</td>
+<td>
+
+```r
+
+# for load data
+df[,c(variable-list)]
+# for read new data
+x<- read.csv(file="datat.txt",
+               colClasses = c(rep("character", 2),
+                              rep("numeric", 1),
+                              rep("NULL", 3)),
+               header = FALSE)
+
+```
+
+</td>
+</tr>
+</table>
+    
 ###  ###
 SAS Code:
 ```SAS
