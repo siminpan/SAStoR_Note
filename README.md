@@ -536,6 +536,86 @@ x<- read.csv(file="datat.csv",
 </tr>
 </table>
     
+### LABEL Statement ###
+
+* a label changes the appearance of a variable name
+* a format changes the appearance of variable value.
+
+<table>
+<tr>
+<th>SAS Code</th>
+<th>R Code</th>
+</tr>
+<tr>
+<td>
+<pre>
+
+```SAS
+
+LABEL variable = 'label'
+      variable = 'label'
+      variable = 'label';
+```
+
+</pre>
+</td>
+<td>
+
+```r
+
+# In R there is only rename
+names(df1) <- colnames(df2)
+colnames(df1) <- colnamelist
+
+library(dplyr)
+df1 %>% rename_all(~df2 %>% pull(col))
+# where col is the column name in df2 dataframe.
+```
+
+</td>
+</tr>
+</table>
+
+In order to use labels in the PRINT procedure, a LABEL option needs to be
+added to the PROC PRINT statement.
+
+```SAS
+
+proc print data=work.subset1 label;
+run;
+```
+
+### FORMAT Statement ###
+
+<table>
+<tr>
+<th>SAS Code</th>
+<th>R Code</th>
+</tr>
+<tr>
+<td>
+<pre>
+
+```SAS
+
+FORMAT variable(s) format;
+```
+
+</pre>
+</td>
+<td>
+
+```r
+
+formatC()
+prettyNum()
+format()
+```
+
+</td>
+</tr>
+</table>
+    
 ###  ###
 SAS Code:
 ```SAS
