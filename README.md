@@ -755,7 +755,7 @@ rowSums(df[,c(variable1,variable2, ...)]
 
 |SAS Code|R Code|Displayed Value|
 |:-:|---|---|
-|YEAR(SAS-date)|format(as.Date(SAS-date,<br /> $~~~~~~~~~~~$origin="1960-01-01"),"%Y")|extracts the year from a SAS date and returns a four-digit value for year.|
+|YEAR(SAS-date)|format(as.Date(SAS-date,<br /> $~~~~~~~~~~~$ origin="1960-01-01"),"%Y")|extracts the year from a SAS date and returns a four-digit value for year.|
 |MONTH(SAS-date)|format(as.Date(SAS-date, origin="1960-01-01"),"%m")|extracts the month from a SAS date and returns a number from 1 to 12.|
 |DAY(SAS-date)|format(as.Date(SAS-date, origin="1960-01-01"),"%d")|extracts the day of the month from a SAS date and returns a number from 1 to 31.|
 |QTR(SAS-date)|library(zoo) <br /> mydf$var9=as.yearqtr(as.Date( mydf$Order.Date, "%m/%d/%Y" )|extracts the quarter from a SAS date and returns a number from 1 to 4.|
