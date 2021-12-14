@@ -683,3 +683,40 @@ Format|Stored Value|Displayed Value|
 |WEEKDATE.|0|Friday, January 1, 1960|
 |MONYY7.|0|JAN1960|
 |YEAR4.|0|1960|
+
+### Assignment Statements ###
+
+<table>
+<tr>
+<th>SAS Code</th>
+<th>R Code</th>
+</tr>
+<tr>
+<td>
+<pre>
+
+```SAS
+
+variable = expression;
+```
+
+</pre>
+</td>
+<td>
+
+```r
+
+df$variable = expression
+```
+
+</td>
+</tr>
+</table>
+
+#### Two Digit Years ####
+
+YEARCUTOFF
+
+* System option that specifies first year of 100 year span for interpreting two-digit years
+* Default in 9.4 = 1926
+* Use four-digit years to avoid misinterpretation
