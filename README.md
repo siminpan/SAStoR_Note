@@ -722,6 +722,30 @@ YEARCUTOFF
 * Use four-digit years to avoid misinterpretation
 
 ### SAS Functions ###
+    
+A SAS function is a routine that returns a value that is determined from specified arguments.
+
+Some SAS functions manipulate character values, compute descriptive statistics, or manipulate SAS date values. General form of a SAS function:
+<table>
+<tr>
+<th>SAS Code</th>
+</tr>
+<tr>
+<td>
+<pre>
+
+```SAS
+
+function-name(argument1, argument2, …)
+```
+
+</pre>
+</td>
+</tr>
+</table>
+
+
+Example:
 
 <table>
 <tr>
