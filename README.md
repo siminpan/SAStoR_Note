@@ -720,3 +720,44 @@ YEARCUTOFF
 * System option that specifies first year of 100 year span for interpreting two-digit years
 * Default in 9.4 = 1926
 * Use four-digit years to avoid misinterpretation
+
+### SAS Functions ###
+
+<table>
+<tr>
+<th>SAS Code</th>
+<th>R Code</th>
+</tr>
+<tr>
+<td>
+<pre>
+
+```SAS
+
+SUM(argument1,argument2, ...)
+```
+
+</pre>
+</td>
+<td>
+
+```r
+
+rowSums(df[,c(variable1,variable2, ...)]
+```
+
+</td>
+</tr>
+</table>
+
+
+### Date Functions ###
+
+|SAS Code|R Code|Displayed Value|
+|:-:|---|---|
+|YEAR(SAS-date)|format(as.Date(SAS-date, origin="1960-01-01"),"%Y")|extracts the year from a SAS date and returns a four-digit value for year.|
+|MONTH(SAS-date)|format(as.Date(SAS-date, origin="1960-01-01"),"%m")|extracts the month from a SAS date and returns a four-digit value for year.|
+|DAY(SAS-date)|format(as.Date(SAS-date, origin="1960-01-01"),"%d")|extracts the month from a SAS date and returns a four-digit value for year.|
+|QTR(SAS-date)|library(zoo) \n mydf$var9=as.yearqtr(as.Date( mydf$Order.Date, "%m/%d/%Y" )|extracts the month from a SAS date and returns a four-digit value for year.|
+|TODAY()||returns the current date as a SAS date value.|
+|MDY(month,day,year)|format(as.Date(SAS-date, origin="1960-01-01"),"%m/%d/%Y")|returns a SAS date value from numeric month, day, and year values.|
