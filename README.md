@@ -151,7 +151,7 @@ run;
 
 ```r
 
-library(hmisc) 
+library(hmisc)
 content(dm)
 ```
 
@@ -209,7 +209,7 @@ SAS Code:
 PROC CONTENTS DATA=libref._ALL_ NODS;
 run;
 ```
-No R equivalent
+No R equivalent, setwd() could help.
 
 SAS Code:
 ```SAS
@@ -479,6 +479,8 @@ df[which(df$Salary > 50000),]
 |modulus|mod()|%%|
 |integer division||%/%|
 
+If a missing value is an operand for an arithmetic operator, the result is a missing value.
+
 ### Logical Operators ###
 |Definition|SAS Symbol|SAS Mnemonic|R Symbol|
 |---|:-:|:-:|:-:|
@@ -496,8 +498,7 @@ where-expression.
 |an inclusive range||BETWEEN-AND|10<=x & x<=15|
 |null value||IS NULL|is.null(x)|
 |missing value||IS MISSING|is.missing(x)|
-|a character string|?|CONTAINS|grepl("\\bWord1\\b",c("Word1","Word2","Word12"))|
-||||grepl("\\<Word1\\>",c("Word1","Word2","Word12"))|
+|a character string|?|CONTAINS|grepl("\\bWord1\\b",c("Word1","Word2","Word12")) <br> grepl("\\<Word1\\>",c("Word1","Word2","Word12"))|
 |a character pattern||LIKE|grep functions|
 
 ### The DROP and KEEP Statements ###
@@ -628,8 +629,7 @@ SAS formats have the following form:
 |:-:|---|
 |$|indicates a character format.|
 |format|names the SAS format or user-defined format.|
-|w|specifies the total format width including decimal
-places and special characters.|
+|w|specifies the total format width including decimal <br> places and special characters.|
 |.|is a required delimiter.|
 |d|specifies the number of decimal places in numeric formats.|
 
