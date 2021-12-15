@@ -797,18 +797,18 @@ rowSums(df[,c(variable1,variable2, ...)]
   <tr>
     <td>
       <pre>
-        ```SAS
+```SAS
 
         YEAR(SAS-date)
-        ```
+```
       </pre>
     </td>
     <td>
       <pre>
-        ```r
+```r
 
         format(as.Date(SAS-date, origin="1960-01-01"),"%Y")
-        ```
+```
       </pre>
     </td>
     <td>
@@ -818,4 +818,81 @@ rowSums(df[,c(variable1,variable2, ...)]
       </pre>
     </td>
   </tr>
+
+  <tr>
+    <td>
+      <pre>
+```SAS
+
+        MONTH(SAS-date)
+```
+      </pre>
+    </td>
+    <td>
+      <pre>
+```r
+
+        format(as.Date(SAS-date, origin="1960-01-01"),"%m")
+```
+      </pre>
+    </td>
+    <td>
+      <pre>
+
+      extracts the month from a SAS date and returns a number from 1 to 12.
+      </pre>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <pre>
+```SAS
+
+        DAY(SAS-date)
+```
+      </pre>
+    </td>
+    <td>
+      <pre>
+```r
+
+        format(as.Date(SAS-date, origin="1960-01-01"),"%d")
+```
+      </pre>
+    </td>
+    <td>
+      <pre>
+
+      extracts the month from a SAS date and returns a number from 1 to 12.
+      </pre>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <pre>
+```SAS
+
+        QTR(SAS-date)
+```
+      </pre>
+    </td>
+    <td>
+      <pre>
+```r
+
+        library(zoo)
+        mydf$var9=as.yearqtr(as.Date(SAS-date, origin="1960-01-01", "%m/%d/%Y"))
+```
+      </pre>
+    </td>
+    <td>
+      <pre>
+
+      extracts the quarter from a SAS date and returns a number from 1 to 4.
+      </pre>
+    </td>
+  </tr>
+
 </table>
