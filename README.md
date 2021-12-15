@@ -845,7 +845,7 @@ extracts the month from a SAS date and returns a number from 1 to 12.
 </pre>
 </td>
 </tr>
-    <tr>
+<tr>
 <td>
 <pre>
 ```SAS
