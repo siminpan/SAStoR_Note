@@ -793,24 +793,23 @@ rowSums(df[,c(variable1,variable2, ...)]
     <th>R Code</th>
     <th>Displayed Value</th>
   </tr>
-
   <tr>
-    <td>
+<td>
 <pre>
 ```SAS
 
 YEAR(SAS-date)
 ```
 </pre>
-    </td>
-    <td>
-      <pre>
+</td>
+<td>
+<pre>
 ```r
 
 format(as.Date(SAS-date, origin="1960-01-01"),"%Y")
 ```
-      </pre>
-    </td>
+</pre>
+</td>
     <td>
       <pre>
 
