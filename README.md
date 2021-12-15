@@ -848,6 +848,7 @@ extracts the month from a SAS date and returns a number from 1 to 12.
 <tr>
 <td>
 <pre>
+
 ```SAS
 
 DAY(SAS-date)
@@ -856,6 +857,7 @@ DAY(SAS-date)
 </td>
 <td>
 <pre>
+
 ```r
 
 format(as.Date(SAS-date, origin="1960-01-01"),"%d")
@@ -872,6 +874,7 @@ extracts the month from a SAS date and returns a number from 1 to 12.
 <tr>
 <td>
 <pre>
+
 ```SAS
 
 QTR(SAS-date)
@@ -880,6 +883,7 @@ QTR(SAS-date)
 </td>
 <td>
 <pre>
+
 ```r
 
 library(zoo)
