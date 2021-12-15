@@ -799,7 +799,7 @@ rowSums(df[,c(variable1,variable2, ...)]
       <pre>
 ```SAS
 
-        YEAR(SAS-date)
+YEAR(SAS-date)
 ```
       </pre>
     </td>
@@ -807,7 +807,7 @@ rowSums(df[,c(variable1,variable2, ...)]
       <pre>
 ```r
 
-        format(as.Date(SAS-date, origin="1960-01-01"),"%Y")
+format(as.Date(SAS-date, origin="1960-01-01"),"%Y")
 ```
       </pre>
     </td>
