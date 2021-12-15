@@ -788,12 +788,13 @@ rowSums(df[,c(variable1,variable2, ...)]
 |MDY(month,day,year)|format(as.Date(SAS-date,<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; origin="1960-01-01"),"%m/%d/%Y")|returns a SAS date value from numeric month, day, and year values.|
 
 <table>
-  <tr>
-    <th>SAS Code</th>
-    <th>R Code</th>
-    <th>Displayed Value</th>
-  </tr>
-  <tr>
+<tr>
+<th>SAS Code</th>
+<th>R Code</th>
+<th>Displayed Value</th>
+</tr>
+
+<tr>
 <td>
 <pre>
 ```SAS
@@ -810,88 +811,88 @@ format(as.Date(SAS-date, origin="1960-01-01"),"%Y")
 ```
 </pre>
 </td>
-    <td>
-      <pre>
+<td>
+<pre>
 
-      extracts the year from a SAS date and returns a four-digit value for year.
-      </pre>
-    </td>
-  </tr>
+extracts the year from a SAS date and returns a four-digit value for year.
+</pre>
+</td>
+</tr>
 
-  <tr>
-    <td>
-      <pre>
+<tr>
+<td>
+<pre>
 ```SAS
 
-        MONTH(SAS-date)
+MONTH(SAS-date)
 ```
-      </pre>
-    </td>
-    <td>
-      <pre>
+</pre>
+</td>
+<td>
+<pre>
 ```r
 
-        format(as.Date(SAS-date, origin="1960-01-01"),"%m")
+format(as.Date(SAS-date, origin="1960-01-01"),"%m")
 ```
-      </pre>
-    </td>
-    <td>
-      <pre>
+</pre>
+</td>
+<td>
+<pre>
 
-      extracts the month from a SAS date and returns a number from 1 to 12.
-      </pre>
-    </td>
-  </tr>
+extracts the month from a SAS date and returns a number from 1 to 12.
+</pre>
+</td>
+</tr>
 
-  <tr>
-    <td>
-      <pre>
+<tr>
+<td>
+<pre>
 ```SAS
 
-        DAY(SAS-date)
+DAY(SAS-date)
 ```
-      </pre>
-    </td>
-    <td>
-      <pre>
+</pre>
+</td>
+<td>
+<pre>
 ```r
 
-        format(as.Date(SAS-date, origin="1960-01-01"),"%d")
+format(as.Date(SAS-date, origin="1960-01-01"),"%d")
 ```
-      </pre>
-    </td>
-    <td>
-      <pre>
+</pre>
+</td>
+<td>
+<pre>
 
-      extracts the month from a SAS date and returns a number from 1 to 12.
-      </pre>
-    </td>
-  </tr>
+extracts the month from a SAS date and returns a number from 1 to 12.
+</pre>
+</td>
+</tr>
 
-  <tr>
-    <td>
-      <pre>
+<tr>
+<td>
+<pre>
 ```SAS
 
-        QTR(SAS-date)
+QTR(SAS-date)
 ```
-      </pre>
-    </td>
-    <td>
-      <pre>
+</pre>
+</td>
+<td>
+<pre>
 ```r
 
-        library(zoo)
-        mydf$var9=as.yearqtr(as.Date(SAS-date, origin="1960-01-01", "%m/%d/%Y"))
+library(zoo)
+mydf$var9=as.yearqtr(as.Date(SAS-date, origin="1960-01-01", "%m/%d/%Y"))
 ```
-      </pre>
-    </td>
-    <td>
-      <pre>
+</pre>
+</td>
+<td>
+<pre>
 
-      extracts the quarter from a SAS date and returns a number from 1 to 4.
-      </pre>
-    </td>
-  </tr>
+extracts the quarter from a SAS date and returns a number from 1 to 4.
+</pre>
+</td>
+</tr>
 
 </table>
