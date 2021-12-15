@@ -786,3 +786,39 @@ rowSums(df[,c(variable1,variable2, ...)]
 |WEEKDAY(SAS-date)|format(as.Date(SAS-date,<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; origin="1960-01-01"),"%w")|extracts the day of the week from a SAS date and returns a number from 1 to 7, where 1 represents Sunday, and so on.|
 |TODAY()||returns the current date as a SAS date value.|
 |MDY(month,day,year)|format(as.Date(SAS-date,<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; origin="1960-01-01"),"%m/%d/%Y")|returns a SAS date value from numeric month, day, and year values.|
+
+<table>
+<tr>
+<th>SAS Code</th>
+<th>R Code</th>
+<th>Displayed Value</th>
+</tr>
+<tr>
+<td>
+<pre>
+
+```SAS
+
+YEAR(SAS-date)
+```
+
+</pre>
+</td>
+<td>
+<pre>
+
+```r
+
+format(as.Date(SAS-date,origin="1960-01-01"),"%Y")
+```
+</pre>
+</td>
+<td>
+<pre>
+
+extracts the year from a SAS date and returns a four-digit value for year.
+</pre>
+</td>
+
+</tr>
+</table>
