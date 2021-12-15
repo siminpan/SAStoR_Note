@@ -784,8 +784,8 @@ rowSums(df[,c(variable1,variable2, ...)]
 |DAY(SAS-date)|format(as.Date(SAS-date,<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; origin="1960-01-01"),"%d")|extracts the day of the month from a SAS date and returns a number from 1 to 31.|
 |QTR(SAS-date)|library(zoo) <br /> mydf$var9=as.yearqtr(as.Date( mydf$Order.Date, "%m/%d/%Y" )|extracts the quarter from a SAS date and returns a number from 1 to 4.|
 |WEEKDAY(SAS-date)|format(as.Date(SAS-date,<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; origin="1960-01-01"),"%w")|extracts the day of the week from a SAS date and returns a number from 1 to 7, where 1 represents Sunday, and so on.|
-|TODAY()||returns the current date as a SAS date value.|
-|MDY(month,day,year)|format(as.Date(SAS-date,<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; origin="1960-01-01"),"%m/%d/%Y")|returns a SAS date value from numeric month, day, and year values.|
+|TODAY()|as.Date(date(), format="%a %b %d  %H:%M:%S %Y") - <br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; as.Date(as.character("1960-01-01"), format="%Y-%m-%d")|returns the current date as a SAS date value.|
+|MDY(month,day,year)|as.Date(as.character("month-day-year"), format="%m-%d-%Y") -<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; as.Date(as.character("1960-01-01"), format="%Y-%m-%d")|returns a SAS date value from numeric month, day, and year values.|
 
 <table>
 <tr>
@@ -895,6 +895,86 @@ mydf$var9=as.yearqtr(as.Date(SAS-date, origin="1960-01-01", "%m/%d/%Y"))
 <pre>
 
 extracts the quarter from a SAS date and returns a number from 1 to 4.
+</pre>
+</td>
+</tr>
+<tr>
+<td>
+<pre>
+
+```SAS
+
+WEEKDAY(SAS-date)
+```
+</pre>
+</td>
+<td>
+<pre>
+
+```r
+
+format(as.Date(SAS-date, origin="1960-01-01"),"%w")
+```
+</pre>
+</td>
+<td>
+<pre>
+
+extracts the day of the week from a SAS date and returns a number from 1 to 7, where 1 represents Sunday, and so on.
+</pre>
+</td>
+</tr>
+<tr>
+<td>
+<pre>
+
+```SAS
+
+TODAY()
+```
+</pre>
+</td>
+<td>
+<pre>
+
+```r
+
+as.Date(date(), format="%a %b %d  %H:%M:%S %Y") -
+as.Date(as.character("1960-01-01"), format="%Y-%m-%d")
+```
+</pre>
+</td>
+<td>
+<pre>
+
+returns the current date as a SAS date value.
+</pre>
+</td>
+</tr>
+<tr>
+<td>
+<pre>
+
+```SAS
+
+MDY(month,day,year)
+```
+</pre>
+</td>
+<td>
+<pre>
+
+```r
+
+as.Date(as.character("month-day-year"), format="%m-%d-%Y") -
+as.Date(as.character("1960-01-01"), format="%Y-%m-%d")
+```
+</pre>
+</td>
+<td>
+<pre>
+
+returns a SAS date value from numeric month, day, and year values.
 </pre>
 </td>
 </tr>
