@@ -797,6 +797,7 @@ rowSums(df[,c(variable1,variable2, ...)]
 <td>
 <pre>
 ```SAS
+
 YEAR(SAS-date)
 ```
 </pre>
@@ -804,12 +805,14 @@ YEAR(SAS-date)
 <td>
 <pre>
 ```r
+
 format(as.Date(SAS-date, origin="1960-01-01"),"%Y")
 ```
 </pre>
 </td>
 <td>
 <pre>
+
 extracts the year from a SAS date and returns a four-digit value for year.
 </pre>
 </td>
@@ -838,7 +841,6 @@ extracts the month from a SAS date and returns a number from 1 to 12.
 </pre>
 </td>
 </tr>
-
 <tr>
 <td>
 <pre>
@@ -863,7 +865,6 @@ extracts the month from a SAS date and returns a number from 1 to 12.
 </pre>
 </td>
 </tr>
-
 <tr>
 <td>
 <pre>
@@ -889,5 +890,4 @@ extracts the quarter from a SAS date and returns a number from 1 to 4.
 </pre>
 </td>
 </tr>
-
 </table>
