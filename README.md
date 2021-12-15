@@ -795,13 +795,14 @@ rowSums(df[,c(variable1,variable2, ...)]
   </tr>
   <tr>
     <td>
-    <pre>
+      <pre>
       
 ```SAS
 
         YEAR(SAS-date)
 ```
-    </pre>
+
+      </pre>
     </td>
     <td>
       <pre>
